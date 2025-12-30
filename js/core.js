@@ -1,5 +1,32 @@
 $(document).ready(function() {
-  // Инициализация слайдера
+
+  function updateCounter(event, slider) {
+    var owlInstance = slider.data('owl.carousel');
+    var current, total;
+
+    if (event && event.item) {
+      current = event.item.index + 1;
+      total = event.item.count;
+    } else if (owlInstance) {
+      current = owlInstance.current() + 1;
+      total = owlInstance.items().length;
+    } else {
+      current = 1;
+      total = slider.find('.result__item').length;
+    }
+
+    // Для loop режима (если вдруг включите)
+    if (owlInstance && owlInstance.options.loop) {
+      var realCurrent = current - 1;
+      if (realCurrent < 1) realCurrent = total;
+      if (realCurrent > total) realCurrent = 1;
+      current = realCurrent;
+    }
+
+    $('.current-slide').text(current);
+    $('.total-slides').text(total);
+  }
+
   var $slider = $('.result__slider');
   $slider.owlCarousel({
     center: true,
@@ -7,9 +34,8 @@ $(document).ready(function() {
     autoWidth: false,
     loop: false,
     margin: 15,
-    dots:false,
+    dots: false,
     nav: true,
-
     navText: [
       `<img src="./img/sld-prev.svg">`,
       `<img src="./img/sld-next.svg">`
@@ -36,4 +62,5 @@ $(document).ready(function() {
   $('#phone-mask').mask('+7(999)999-99-99', {
     placeholder: "+7(___)___-__-__"
   });
+
 });

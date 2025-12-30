@@ -1019,7 +1019,9 @@ header {
 .input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-
+.form-download__form .input, .form-download__form .btn__white{
+  max-width: 352px;
+}
 @media (max-width: 768px) {
   .owl-carousel .owl-item .result__item-mob-img {
     display: flex;
