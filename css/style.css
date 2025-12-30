@@ -189,12 +189,44 @@ header {
 }
 .hero{
   display: flex;
+  flex-direction: column;
   padding: 90px 0;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
+  overflow:  hidden;
+  max-height: 850px;
+  position:  relative;
+}
+.hero video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 1;
 }
 
+.hero__content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+}
+.hero__brands{
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
 .hero__title{
   font-weight: 400;
   font-size: 42px;
@@ -204,4 +236,63 @@ header {
   color: #FFFFFF;
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 787px;
+}
+.hero__btn{
+  width: 246px;
+  height: 246px;
+  background: linear-gradient(147.26deg, rgba(255, 255, 255, 0.08) 11.32%, rgba(255, 255, 255, 0) 75.27%), #208D79;
+  border-radius: 123px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.hero__btn span{
+  font-weight: 300;
+  font-size: 26.1239px;
+  line-height: 35px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.hero__desc{
+  margin-top: -130px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hero__desc-item{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.hero__desc-item span{
+  font-family: var(--Manrope);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 130%;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+.hero__count{
+  display: flex;
+  gap: 8px;
+}
+.hero__count-item{
+  display: flex;
+  flex-direction: column;
+}
+.hero__count-item b{
+  flex-grow: 1;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 63px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -2.698px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
