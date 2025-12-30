@@ -189,8 +189,19 @@ header {
 }
 .hero{
   display: flex;
-  padding: 20px 0;
+  padding: 90px 0;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.hero__title{
 
+.hero__title{
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
 }
