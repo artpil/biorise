@@ -720,9 +720,6 @@ header {
 }
 
 .invest {
-}
-
-.invest {
   display: flex;
   flex-direction: column;
   margin: 0 var(--wrap-m);
@@ -852,6 +849,106 @@ header {
   letter-spacing: -0.01em;
 }
 
+.income {
+  display: flex;
+  flex-direction: column;
+  margin: 0 var(--wrap-m);
+  margin-top: 40px;
+  background: #F5F5F5;
+  border-radius: 40px;
+  padding: 80px 0;
+}
+
+.income__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.income__title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #373737;
+  width: 100%;
+  max-width: 645px;
+}
+.income__content{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 28px;
+}
+.income__formul{
+  width: 100%;
+  display: flex;
+  gap: 27px;
+  align-items: flex-start;
+  background: #FFFFFF;
+  border-radius: 30px;
+  margin-top: 53px;
+  padding: 54px 36px;
+}
+.income__formul img{
+  margin-top: 15px;
+}
+.income__formul-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 13px;
+}
+.income__formul-col b{
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  display: flex;
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #208D79;
+}
+.income__formul-col small{
+  font-family: var(--Manrope);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: rgba(56, 56, 56, 0.6);
+
+}
+
+
+.income__item{
+  width: 100%;
+  max-width: 373px;
+  height: 185px;
+  background: #208D79;
+  border-radius: 24px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 42px 25px;
+
+}
+.income__item b{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  flex-grow: 1;
+}
+.income__item small{
+  font-family: var(--Manrope);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  max-width: 233px;
+}
 @media (max-width: 768px) {
   .owl-carousel .owl-item .result__item-mob-img {
     display: flex;
