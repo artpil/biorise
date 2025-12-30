@@ -196,7 +196,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  max-height: 850px;
   position: relative;
 }
 
@@ -230,7 +229,15 @@ header {
   align-items: center;
   width: 100%;
 }
-
+.hero__brands span{
+  font-family: var(--Manrope);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
 .hero__title {
   font-weight: 400;
   font-size: 42px;
