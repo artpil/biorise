@@ -7,6 +7,13 @@ $(document).ready(function() {
     autoWidth: false,
     loop: false,
     margin: 15,
+    dots:false,
+    nav: true,
+
+    navText: [
+      `<img src="./img/sld-prev.svg">`,
+      `<img src="./img/sld-next.svg">`
+    ],
     responsive: {
       1200: {
         items: 1
