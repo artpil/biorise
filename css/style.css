@@ -38,6 +38,7 @@
 
 :root {
   --Manrope: "Manrope", sans-serif;
+  --wrap-m: 32px;
 }
 
 
@@ -214,7 +215,7 @@ header {
   z-index: 1;
 }
 
-.hero__content {
+.hero__container {
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
@@ -330,4 +331,23 @@ header {
   align-items: center;
   color: #FFFFFF;
   margin-bottom: 20px;
+}
+.result{
+  display: flex;
+  flex-direction: column;
+  margin: 0 var(--wrap-m);
+  margin-top: 40px;
+  background: #F5F5F5;
+  border-radius: 40px;
+  padding: 80px 0;
+}
+.muted{
+  opacity: 0.6;
+}
+.result__header{
+
+}
+.result__item{
+  display: flex;
+  flex-direction: column;
 }
