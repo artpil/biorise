@@ -147,14 +147,14 @@ header {
   gap: 23px;
 }
 
-.header__phone-link{
+.header__phone-link {
   font-family: var(--Manrope);
   font-weight: 700;
   font-size: 16px;
   line-height: 140%;
   letter-spacing: -0.01em;
   color: #208D79;
-  text-decoration:  none;
+  text-decoration: none;
 }
 
 .header__phone-btn {
@@ -187,18 +187,20 @@ header {
 .header__burger {
   display: none;
 }
-.hero{
+
+.hero {
   display: flex;
   flex-direction: column;
   padding: 90px 0;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
-  overflow:  hidden;
+  overflow: hidden;
   max-height: 850px;
-  position:  relative;
+  position: relative;
 }
-.hero video{
+
+.hero video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -213,21 +215,23 @@ header {
   z-index: 1;
 }
 
-.hero__content{
+.hero__content {
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
   position: relative;
   z-index: 1;
 }
-.hero__brands{
+
+.hero__brands {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
   align-items: center;
   width: 100%;
 }
-.hero__title{
+
+.hero__title {
   font-weight: 400;
   font-size: 42px;
   line-height: 110%;
@@ -239,7 +243,8 @@ header {
   width: 100%;
   max-width: 787px;
 }
-.hero__btn{
+
+.hero__btn {
   width: 246px;
   height: 246px;
   background: linear-gradient(147.26deg, rgba(255, 255, 255, 0.08) 11.32%, rgba(255, 255, 255, 0) 75.27%), #208D79;
@@ -251,25 +256,29 @@ header {
   gap: 20px;
   padding: 20px;
 }
-.hero__btn span{
+
+.hero__btn span {
   font-weight: 300;
   font-size: 26.1239px;
   line-height: 35px;
   color: #FFFFFF;
   text-align: center;
 }
-.hero__desc{
+
+.hero__desc {
   margin-top: -130px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.hero__desc-item{
+
+.hero__desc-item {
   display: flex;
   gap: 16px;
   align-items: center;
 }
-.hero__desc-item span{
+
+.hero__desc-item span {
   font-family: var(--Manrope);
   font-weight: 400;
   font-size: 22px;
@@ -277,22 +286,41 @@ header {
   letter-spacing: -0.01em;
   color: #FFFFFF;
 }
-.hero__count{
+
+.hero__count {
   display: flex;
   gap: 8px;
+  width: 100%;
 }
-.hero__count-item{
+
+.hero__count-item {
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 15px 17px;
+  width: 100%;
+  max-width: 320px;
+  height: 176px;
 }
-.hero__count-item b{
+
+.hero__count-item b {
   flex-grow: 1;
   font-weight: 400;
   font-size: 36px;
   line-height: 63px;
-  display: flex;
-  align-items: center;
   letter-spacing: -2.698px;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+.hero__count-item span{
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  margin-bottom: 20px;
 }
