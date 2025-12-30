@@ -63,4 +63,29 @@ $(document).ready(function() {
     placeholder: "+7(___)___-__-__"
   });
 
+
+  // tab
+  $('.tab').each(function() {
+    var $container = $(this);
+    var $tabs = $container.find('.tab-item');
+    var $contents = $container.find('.tab-content');
+
+    // Инициализация первого таба в каждом контейнере
+    $contents.hide().first().show();
+    $contents.removeClass('active').first().addClass('active');
+    $tabs.removeClass('active').first().addClass('active');
+
+    // Обработчик клика
+    $tabs.click(function() {
+      var index = $(this).index();
+      var $parentContainer = $(this).closest('.tab');
+
+      $parentContainer.find('.tab-item').removeClass('active');
+      $(this).addClass('active');
+
+      $parentContainer.find('.tab-content').hide().removeClass('active');
+      $parentContainer.find('.tab-content').eq(index).show().addClass('active');
+    });
+  });
+
 });
