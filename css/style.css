@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Manrope:wght@200..800&display=swap');
+
+
+/*@font-face {*/
+/*  font-family: 'Bezier Sans';*/
+/*  src: url('../font/BezierSans-ExtraBold.woff2') format('woff2'), url('../font/BezierSans-ExtraBold.woff') format('woff');*/
+/*  font-weight: 1;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Bezier Sans';*/
+/*  src: url('../font/BezierSans-Light.woff2') format('woff2'), url('../font/BezierSans-Light.woff') format('woff');*/
+/*  font-weight: 300;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Bezier Sans';*/
+/*  src: url('../font/BezierSans-Regular.woff2') format('woff2'), url('../font/BezierSans-Regular.woff') format('woff');*/
+/*  font-weight: 400;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Bezier Sans';*/
+/*  src: url('../font/BezierSans-Bold.woff2') format('woff2'), url('../font/BezierSans-Bold.woff') format('woff');*/
+/*  font-weight: 700;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Bezier Sans';*/
+/*  src: url('../font/BezierSans-ExtraBold.woff2') format('woff2'), url('../font/BezierSans-ExtraBold.woff') format('woff');*/
+/*  font-weight: 800;*/
+/*  font-style: normal;*/
+/*}*/
+
+:root {
+  --Manrope: "Manrope", sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1195px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.running-text-container {
+  width: 100%;
+  background: #208D79;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.slogan {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--Manrope);
+  font-size: 14px;
+  line-height: 100%;
+  color: #FFFFFF;
+
+}
+
+.header__inner {
+  height: 82px;
+  background: #FFFFFF;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+}
+
+.header__inner .container {
+  max-width: 1370px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 66px;
+  background: #FFFFFF;
+  border-radius: 100px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__nav li {
+  display: flex;
+}
+
+.header__nav li a {
+  font-family: var(--Manrope);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: rgba(55, 55, 55, 0.6);
+  text-decoration: none;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.header__phone-link{
+  font-family: var(--Manrope);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #208D79;
+  text-decoration:  none;
+}
+
+.header__phone-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  height: 38px;
+  border: 1px solid #006465;
+  border-radius: 100px;
+  font-family: var(--Manrope);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #208D79;
+  text-align: center;
+  text-decoration: none;
+}
+
+.header__social {
+  display: flex;
+  align-items: center;
+}
+
+.header__social a {
+  text-decoration: none;
+}
+
+.header__burger {
+  display: none;
+}
+.hero{
+  display: flex;
+  padding: 20px 0;
+}
+.hero__title{
+
+}
