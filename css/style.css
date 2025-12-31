@@ -337,7 +337,7 @@ header {
   color: #FFFFFF;
 }
 
-.hero__count-item span {
+.hero__count-item> span {
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
@@ -2555,7 +2555,7 @@ header {
   .m-order3{order:3}
   .m-order4{order:4}
   .m-order5{order:5}
-  
+
 
 
 }
