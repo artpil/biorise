@@ -130,13 +130,13 @@ $(document).ready(function () {
   });
 
   function checkWidthAndInitCarousel() {
-    // Проверяем для .package__nav
+
     if ($(window).width() < 768) {
       // Добавляем класс owl-carousel если его еще нет
       if (!$('.package__nav').hasClass('owl-carousel')) {
         $('.package__nav').addClass('owl-carousel');
 
-        // Инициализируем Owl Carousel
+
         $('.package__nav.owl-carousel').owlCarousel({
           loop: false,
           margin: 16,
@@ -145,17 +145,15 @@ $(document).ready(function () {
           items: 3,
           autoWidth: true,
           onInitialized: function() {
-            // После инициализации карусели обновляем активные табы
+
             updateActiveTabs();
           }
         });
       }
 
-      // Проверяем для .format__nav (если есть)
+
       if (!$('.format__nav').hasClass('owl-carousel')) {
         $('.format__nav').addClass('owl-carousel');
-
-        // Инициализируем Owl Carousel для format__nav
         $('.format__nav.owl-carousel').owlCarousel({
           loop: false,
           margin: 16,
@@ -164,13 +162,31 @@ $(document).ready(function () {
           items: 2,
           autoWidth: true,
           onInitialized: function() {
-            // После инициализации карусели обновляем активные табы
+
             updateActiveTabs();
           }
         });
       }
+
+
+      if (!$('.team__tab-content').hasClass('owl-carousel')) {
+        $('.team__tab-content').addClass('owl-carousel');
+        $('.team__tab-content.owl-carousel').owlCarousel({
+          loop: false,
+          margin: 16,
+          nav: false,
+          dots: false,
+          items: 2,
+          autoWidth: true,
+          onInitialized: function() {
+            updateActiveTabs();
+          }
+        });
+      }
+
+
     } else {
-      // Удаляем класс owl-carousel и уничтожаем карусель если она была инициализирована
+
       if ($('.package__nav').hasClass('owl-carousel')) {
         var packageOwl = $('.package__nav.owl-carousel');
         if (typeof packageOwl.data('owl.carousel') !== 'undefined') {
@@ -178,13 +194,13 @@ $(document).ready(function () {
         }
         $('.package__nav').removeClass('owl-carousel owl-loaded owl-drag');
 
-        // Удаляем все добавленные Owl Carousel элементы
+
         $('.package__nav').find('.owl-stage-outer, .owl-nav, .owl-dots').remove();
         $('.package__nav').removeAttr('style');
         $('.package__nav > *').removeAttr('style');
       }
 
-      // Удаляем класс owl-carousel для .format__nav
+
       if ($('.format__nav').hasClass('owl-carousel')) {
         var formatOwl = $('.format__nav.owl-carousel');
         if (typeof formatOwl.data('owl.carousel') !== 'undefined') {
@@ -192,18 +208,31 @@ $(document).ready(function () {
         }
         $('.format__nav').removeClass('owl-carousel owl-loaded owl-drag');
 
-        // Удаляем все добавленные Owl Carousel элементы
+
         $('.format__nav').find('.owl-stage-outer, .owl-nav, .owl-dots').remove();
         $('.format__nav').removeAttr('style');
         $('.format__nav > *').removeAttr('style');
       }
 
-      // После удаления карусели обновляем активные табы
+      if ($('.team__tab-content').hasClass('owl-carousel')) {
+        var formatOwl = $('.team__tab-content.owl-carousel');
+        if (typeof formatOwl.data('owl.carousel') !== 'undefined') {
+          formatOwl.owlCarousel('destroy');
+        }
+        $('.team__tab-content').removeClass('owl-carousel owl-loaded owl-drag');
+
+
+        $('.team__tab-content').find('.owl-stage-outer, .owl-nav, .owl-dots').remove();
+        $('.team__tab-content').removeAttr('style');
+        $('.team__tab-content > *').removeAttr('style');
+      }
+
+
       updateActiveTabs();
     }
   }
 
-  // Функция для обновления активных табов во всех контейнерах
+
   function updateActiveTabs() {
     $('.tab').each(function() {
       var $container = $(this);

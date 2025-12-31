@@ -2484,8 +2484,23 @@ header {
     line-height: 22px;
   }
 
-
-
+  .first-sale{
+    margin-top: 0;
+    border-radius: 0;
+    padding: 62px 0;
+  }
+  .first-sale__content{
+    padding: 24px 22px;
+    margin-top: 76px;
+    gap: 23px;
+  }
+  .first-sale__right{
+    height: 40px;
+  }
+  .first-sale__left{
+    font-size: 18px;
+    white-space: nowrap;
+  }
 
 
 
@@ -2502,11 +2517,45 @@ header {
     flex-direction: column;
     gap: 12px;
   }
+  .team{
+    margin-top: 0;
+    border-radius: 0;
+    padding: 62px 0;
+  }
 
   .team__nav {
     overflow-x: auto;
     width: 100%;
   }
+
+  .map{
+    margin-top: 0;
+    border-radius: 0;
+    padding: 62px 0;
+  }
+  .map__header{
+    flex-direction: column;
+  }
+  .faq{
+    margin-top: 0;
+    border-radius: 0;
+    padding: 62px 0;
+  }
+  .about{
+    margin-top: 0;
+    border-radius: 0;
+    padding: 62px 0;
+  }
+  .footer{
+    border-radius: 0;
+    padding: 62px 0;
+  }
+  .m-order1{order:1}
+  .m-order2{order:2}
+  .m-order3{order:3}
+  .m-order4{order:4}
+  .m-order5{order:5}
+  
 
 
 }
