@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
   function updateCounter(event, slider) {
     var owlInstance = slider.data('owl.carousel');
@@ -29,8 +29,7 @@ $(document).ready(function() {
 
   var $slider = $('.result__slider');
   $slider.owlCarousel({
-    center: true,
-    items: 1,
+    center: false,
     autoWidth: false,
     loop: false,
     margin: 15,
@@ -48,13 +47,14 @@ $(document).ready(function() {
         items: 1,
       },
       320: {
-        items: 1.1,
+        margin: 12,
+        items: 1.15,
       }
     },
-    onInitialized: function(event) {
+    onInitialized: function (event) {
       updateCounter(event, $slider);
     },
-    onChanged: function(event) {
+    onChanged: function (event) {
       updateCounter(event, $slider);
     }
   });
@@ -91,7 +91,7 @@ $(document).ready(function() {
 
 
   // tab
-  $('.tab').each(function() {
+  $('.tab').each(function () {
     var $container = $(this);
     var $tabs = $container.find('.tab-item');
     var $contents = $container.find('.tab-content');
@@ -102,7 +102,7 @@ $(document).ready(function() {
     $tabs.removeClass('active').first().addClass('active');
 
     // Обработчик клика
-    $tabs.click(function() {
+    $tabs.click(function () {
       var index = $(this).index();
       var $parentContainer = $(this).closest('.tab');
 
@@ -115,34 +115,63 @@ $(document).ready(function() {
   });
 
   //модальное окна
-  $(document).on('click', '.modal-link', function(e) {
+  $(document).on('click', '.modal-link', function (e) {
     e.preventDefault();
     var target = $(this).data('target');
     $(target).addClass('is-active');
     $('body').css('overflow', 'hidden');
   });
+
   function closeModal() {
     $('.modal').removeClass('is-active');
     $('body').css('overflow', '');
   }
-  $(document).on('click', '.modal__close', function(e) {
+
+  $(document).on('click', '.modal__close', function (e) {
     e.stopPropagation();
     closeModal();
   });
-  $(document).on('click', '.modal__overlay', function() {
+  $(document).on('click', '.modal__overlay', function () {
     closeModal();
   });
-  $(document).on('keydown', function(e) {
+  $(document).on('keydown', function (e) {
     if (e.key === 'Escape' || e.keyCode === 27) {
       closeModal();
     }
   });
-  $(document).on('click', '.modal__content', function(e) {
+  $(document).on('click', '.modal__content', function (e) {
     e.stopPropagation();
   });
-  $(document).on('click', '.modal a', function(e) {
+  $(document).on('click', '.modal a', function (e) {
     if ($(this).attr('href')) {
       closeModal();
+    }
+  });
+
+  // бургер
+  $('.header__burger').on('click', function () {
+    $('.header__nav').toggleClass('active');
+    $(this).toggleClass('active');
+    if ($('.header__nav').hasClass('active')) {
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', '');
+    }
+  });
+  $('.header__nav-item').on('click', function () {
+    if ($(window).width() < 768) {
+      $('.header__nav').removeClass('active');
+      $('.header__burger').removeClass('active');
+      $('body').css('overflow', '');
+    }
+  });
+  $(document).on('click', function (e) {
+    if ($(window).width() < 768) {
+      if (!$(e.target).closest('.header__nav, .header__burger').length) {
+        $('.header__nav').removeClass('active');
+        $('.header__burger').removeClass('active');
+        $('body').css('overflow', '');
+      }
     }
   });
 
