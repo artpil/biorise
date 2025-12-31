@@ -64,7 +64,7 @@ $(document).ready(function() {
     center: false,
     items: 4,
     autoWidth: false,
-    loop: false,
+    loop: true,
     margin: 40,
     dots: false,
     nav: true,
@@ -77,7 +77,7 @@ $(document).ready(function() {
         items: 4
       },
       768: {
-        items: 2,
+        items: 3,
       },
       320: {
         items: 1.05,
@@ -112,6 +112,38 @@ $(document).ready(function() {
       $parentContainer.find('.tab-content').hide().removeClass('active');
       $parentContainer.find('.tab-content').eq(index).show().addClass('active');
     });
+  });
+
+  //модальное окна
+  $(document).on('click', '.modal-link', function(e) {
+    e.preventDefault();
+    var target = $(this).data('target');
+    $(target).addClass('is-active');
+    $('body').css('overflow', 'hidden');
+  });
+  function closeModal() {
+    $('.modal').removeClass('is-active');
+    $('body').css('overflow', '');
+  }
+  $(document).on('click', '.modal__close', function(e) {
+    e.stopPropagation();
+    closeModal();
+  });
+  $(document).on('click', '.modal__overlay', function() {
+    closeModal();
+  });
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      closeModal();
+    }
+  });
+  $(document).on('click', '.modal__content', function(e) {
+    e.stopPropagation();
+  });
+  $(document).on('click', '.modal a', function(e) {
+    if ($(this).attr('href')) {
+      closeModal();
+    }
   });
 
 });
