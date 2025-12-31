@@ -1109,24 +1109,11 @@ header {
   box-shadow: none;
 }
 
-.css-checkbox:checked + label::after {
-  content: " ";
+.css-checkbox:checked + label::before {
   background-image: url("../img/input-check.svg");
   background-repeat: no-repeat;
   background-size: 12px 12px;
   background-position: center center;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0px;
-  left: 0px;
-  top: 0px;
-  text-align: center;
-  background-color: transparent;
-  font-size: 10px;
-  height: 20px;
-  width: 20px;
 }
 
 .package {
@@ -2418,16 +2405,97 @@ header {
   }
   .form-download{
     margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 32px;
+    background: url(../img/form-download-mob-bg.png), #208D79;
+    background-repeat: no-repeat;
+    background-position: bottom center, center center;
+    background-size: contain;
+    padding: 50px 15px 216px;
   }
+  .form-download__desc{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    margin-top: 22px;
+  }
+  .form-download__form{
+    gap: 16px;
+    margin-top: 45px;
+  }
+  .form-download__form .input,
+  .form-download__form .btn__white{
+    width: 100%;
+    max-width: none;
+  }
+
+  .package{
+    margin-top: 0;
+    border-radius: 0;
+    padding: 62px 0;
+  }
+
 
 
   .package__content {
     flex-direction: column;
+    margin-top: 29px;
+    gap: 32px;
   }
+
+  .package__nav {
+    overflow-x: auto;
+    width: auto;
+    flex-direction: row;
+    max-width: none;
+    gap: 16px;
+  }
+  .package__tab{
+    padding: 27px;
+  }
+  .package__tab-item{
+
+  }
+  .package__tab-content{
+    flex-direction: column;
+  }
+  .package__tab-title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 22px;
+  }
+
+  .format{
+    margin-top: 0;
+    border-radius: 0;
+    padding: 62px 0;
+  }
+  .format__tab{
+    padding: 27px;
+  }
+  .format__tab-content{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .format__tab-title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 22px;
+  }
+
+
+
+
+
+
 
   .format__nav {
     overflow-x: auto;
-    width: 100%;
+    width: auto;
+    flex-direction: row;
+    max-width: none;
+    gap: 16px;
   }
 
   .first-sale__row {
