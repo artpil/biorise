@@ -251,6 +251,49 @@ $(document).ready(function () {
     });
   }
 
+  // Обработчик клика на .team__nav-current (открытие/закрытие списка)
+  $('.team__nav-mob .team__nav-current').on('click', function(e) {
+    e.stopPropagation();
+    $('.team__nav-list').slideToggle(0);
+    $(this).toggleClass('open');
+  });
+
+  // Обработчик клика на элементы списка
+  $('.team__nav-mob .team__tab-item').on('click', function(e) {
+    e.stopPropagation();
+
+    // Получаем текст текущего элемента
+    var selectedText = $(this).text();
+    var selectedIndex = $(this).index();
+
+    // Обновляем текст в .team__nav-current
+    $('.team__nav-current').text(selectedText);
+
+    // Удаляем класс active у всех элементов
+    $('.team__tab-item').removeClass('active');
+
+    // Добавляем класс active текущему элементу
+    $(this).addClass('active');
+
+    // Обновляем все табы на странице
+    updateActiveTabs();
+
+    // Закрываем выпадающий список
+    $('.team__nav-list').slideUp(0);
+    $('.team__nav-current').removeClass('open');
+  });
+
+  // Закрытие выпадающего списка при клике вне его
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.team__nav-mob').length) {
+      $('.team__nav-list').slideUp(0);
+      $('.team__nav-current').removeClass('open');
+    }
+  });
+
+  // Инициализация при загрузке страницы
+  updateActiveTabs();
+
   // Проверяем при загрузке страницы
   checkWidthAndInitCarousel();
 

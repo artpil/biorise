@@ -1443,6 +1443,11 @@ header {
   margin-top: 60px;
 }
 
+.team__nav-mob{
+  display: none;
+}
+
+
 .team__nav {
   display: flex;
   justify-content: space-between;
@@ -2523,9 +2528,84 @@ header {
     padding: 62px 0;
   }
 
-  .team__nav {
-    overflow-x: auto;
+  .team__content > .team__nav {
+    display: none;
+  }
+
+  .team__nav-mob{
+    display: flex;
+    position: relative;
+  }
+  .team__nav-current{
+    display: flex;
+    align-items:  center;
+    padding: 5px 20px;
+    height: 60px;
     width: 100%;
+    max-width: 366px;
+    background: #F2F5F4;
+    border: 1px solid #208D79;
+    border-radius: 30px;
+    justify-content: space-between;
+    margin-bottom: -9px;
+    position: relative;
+    z-index: 3;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: #208D79;
+  }
+  .team__nav-current.open{
+    border-radius: 30px 30px 0 0;
+    border-bottom: 0;
+
+  }
+  .team__nav-current:after{
+    display: block;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url("../img/sld-next.svg") no-repeat center center;
+    background-size: 100%;
+    transform: rotate(90deg);
+    transform-origin: center;
+    filter:invert(43%) sepia(58%) saturate(536%) hue-rotate(119deg) brightness(93%) contrast(87%);
+  }
+  .team__nav-mob .team__tab-item{
+    height: auto;
+    width: 100%;
+    max-width: none;
+    justify-content: flex-start;
+    background: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    color: #373737;
+    text-align: left;
+  }
+  .team__nav-mob .team__tab-item.active{
+   display: none;
+  }
+  .team__nav-list{
+    display: none;
+    width: 100%;
+    max-width: 366px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    background: #F2F5F4;
+    border: 1px solid #208D79;
+    border-top: none;
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+    border-radius: 0 0 30px 30px;
+    text-align: left;
+    padding-bottom: 15px;
+
   }
 
   .map{
@@ -2555,6 +2635,7 @@ header {
   .m-order3{order:3}
   .m-order4{order:4}
   .m-order5{order:5}
+
 
 
 
